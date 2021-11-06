@@ -11,8 +11,8 @@ body
     height: 100%
     width: 100%
     main
-        background-image: url('back.png')
-        background-size: cover
+        // background-image: url('../back.png')
+        // background-size: cover
         height: 100vh
         width: 100vw
         padding-left: 7.5%
@@ -50,11 +50,14 @@ body
                     margin-top: -20px
                 .aliance-box, .masters-box, .body-box
                     min-height: 110px
-                    background-color: #ffffff
+                    background-color: white
                     margin: 12px 4%
                     padding: 12px
+                    box-shadow: 4px 5px 38px -12px rgba(0,0,0,0.30)
+                    -webkit-box-shadow: 4px 5px 38px -12px rgba(0,0,0,0.30)
+                    -moz-box-shadow: 4px 5px 38px -12px rgba(0,0,0,0.30)
                 .home-box
-                    background-image: url('place.png')
+                    margin: 12px 0
                     background-size: cover
                     height: 100px
                     padding: 12px
@@ -70,8 +73,12 @@ body
                         flex: row
                         justify-content: space-evenly
                         .spin
+                            background-color: #e7e7e7
+                            box-shadow: 4px 5px 38px -12px rgba(0,0,0,0.31)
+                            -webkit-box-shadow: 4px 5px 38px -12px rgba(0,0,0,0.31)
+                            -moz-box-shadow: 4px 5px 38px -12px rgba(0,0,0,0.31)
+                            border-radius: 50px
                             font-family: 'Nunito', sans-serif
-                            background-image: url('ico1.png')
                             justify-content: center
                             background-size: cover
                             align-content: center
@@ -145,8 +152,8 @@ body
                     
                     .wrap-list
                         ul
-                            transition: height .6s
                             overflow: hidden
+                            transition: height .6s
                             height: 50px
                             li
                                 font-family: 'Nunito', sans-serif
@@ -159,6 +166,7 @@ body
                             border-left: 15px solid transparent
                             border-right: 15px solid transparent
                             border-top: 15px solid #f00
+                            border-bottom: 0
                             background-color: none
                             background: none
                             display: block
@@ -173,37 +181,22 @@ body
             height: 20%
             width: 40%
             background: red
-            bottom: -133px
+            bottom: -150px
             right: 0
             border-radius: 100% 0 0 0
             z-index: 3
-            background-image: url('1.png')
             background-size: cover
             animation: pushup .8s
             animation-delay: .8s
             animation-fill-mode: forwards
             @keyframes pushup
                 0%
-                    bottom: -133px
+                    bottom: -150px
                     
                 100%
                     bottom: 0
 
                     
-
-        .widget::after
-            position: absolute
-            content: ''
-            height: 200%
-            width: 200%
-            background: rgb(0,55,155)
-            background: radial-gradient(circle, rgba(0,55,155,0.691415313225058) 18%, rgba(4,57,222,0.38515081206496515) 81%, rgba(46,0,3,0.7610208816705336) 96%)
-            bottom: -100%
-            right: -100%
-            border-radius: 100%
-            z-index: 2
-            animation: effect 1s
-            animation-iteration-count: infinite
 
         .items
             width: 25%
@@ -214,6 +207,7 @@ body
             
             ul
                 width: 100%
+                overflow: hidden
             li
                 box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
                 -webkit-box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
@@ -232,8 +226,8 @@ body
                 width: 108%
 
             li:nth-child(odd)
-                background-image: url(1.png)
+                background-image: url("../1.png")
                 background-size: cover
             li:nth-child(even)
-                background-image: url(2.png)
+                background-image: url("../2.png")
                 background-size: cover

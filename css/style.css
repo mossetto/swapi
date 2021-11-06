@@ -16,8 +16,6 @@ body {
   width: 100%;
 }
 body main {
-  background-image: url("back.png");
-  background-size: cover;
   height: 100vh;
   width: 100vw;
   padding-left: 7.5%;
@@ -62,12 +60,15 @@ body main .cards .info1 h2 {
 }
 body main .cards .info1 .aliance-box, body main .cards .info1 .masters-box, body main .cards .info1 .body-box {
   min-height: 110px;
-  background-color: #ffffff;
+  background-color: white;
   margin: 12px 4%;
   padding: 12px;
+  box-shadow: 4px 5px 38px -12px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 4px 5px 38px -12px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 4px 5px 38px -12px rgba(0, 0, 0, 0.3);
 }
 body main .cards .info1 .home-box {
-  background-image: url("place.png");
+  margin: 12px 0;
   background-size: cover;
   height: 100px;
   padding: 12px;
@@ -85,8 +86,12 @@ body main .cards .info1 .body-box > div {
   justify-content: space-evenly;
 }
 body main .cards .info1 .body-box > div .spin {
+  background-color: #e7e7e7;
+  box-shadow: 4px 5px 38px -12px rgba(0, 0, 0, 0.31);
+  -webkit-box-shadow: 4px 5px 38px -12px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 4px 5px 38px -12px rgba(0, 0, 0, 0.31);
+  border-radius: 50px;
   font-family: "Nunito", sans-serif;
-  background-image: url("ico1.png");
   justify-content: center;
   background-size: cover;
   align-content: center;
@@ -178,8 +183,8 @@ body main .cards .info1 .aliance-box, body main .cards .info1 .masters-box {
   }
 }
 body main .cards .info1 .aliance-box .wrap-list ul, body main .cards .info1 .masters-box .wrap-list ul {
-  transition: height 0.6s;
   overflow: hidden;
+  transition: height 0.6s;
   height: 50px;
 }
 body main .cards .info1 .aliance-box .wrap-list ul li, body main .cards .info1 .masters-box .wrap-list ul li {
@@ -194,6 +199,7 @@ body main .cards .info1 .aliance-box .wrap-list .arrow, body main .cards .info1 
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-top: 15px solid #f00;
+  border-bottom: 0;
   background-color: none;
   background: none;
   display: block;
@@ -208,11 +214,10 @@ body main .widget {
   height: 20%;
   width: 40%;
   background: red;
-  bottom: -133px;
+  bottom: -150px;
   right: 0;
   border-radius: 100% 0 0 0;
   z-index: 3;
-  background-image: url("1.png");
   background-size: cover;
   animation: pushup 0.8s;
   animation-delay: 0.8s;
@@ -220,25 +225,11 @@ body main .widget {
 }
 @keyframes pushup {
   0% {
-    bottom: -133px;
+    bottom: -150px;
   }
   100% {
     bottom: 0;
   }
-}
-body main .widget::after {
-  position: absolute;
-  content: "";
-  height: 200%;
-  width: 200%;
-  background: #00379b;
-  background: radial-gradient(circle, rgba(0, 55, 155, 0.6914153132) 18%, rgba(4, 57, 222, 0.3851508121) 81%, rgba(46, 0, 3, 0.7610208817) 96%);
-  bottom: -100%;
-  right: -100%;
-  border-radius: 100%;
-  z-index: 2;
-  animation: effect 1s;
-  animation-iteration-count: infinite;
 }
 body main .items {
   width: 25%;
@@ -249,6 +240,7 @@ body main .items {
 }
 body main .items ul {
   width: 100%;
+  overflow: hidden;
 }
 body main .items li {
   box-shadow: -4px -3px 5px -1px rgba(0, 0, 0, 0.33);
@@ -268,11 +260,11 @@ body main .items li:hover {
   width: 108%;
 }
 body main .items li:nth-child(odd) {
-  background-image: url(1.png);
+  background-image: url("../1.png");
   background-size: cover;
 }
 body main .items li:nth-child(even) {
-  background-image: url(2.png);
+  background-image: url("../2.png");
   background-size: cover;
 }
 
