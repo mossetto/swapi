@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap')
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Jockey One', sans-serif
+h1,h2,h3
+    font-weight: 300
+body
+    height: 100%
+    width: 100%
+    main
+        background-image: url('back.png')
+        background-size: cover
+        height: 100vh
+        width: 100vw
+        padding-left: 7.5%
+        padding-top: 10%
+        overflow: hidden
+        position: relative
+        perspective: 15px
+        
+        .widget, .items
+            position: absolute
+        .cards
+            width: 72%
+            height: 96%
+            background: #ffffff94
+            border-radius: 10px
+            margin-left: -500px
+            transform: rotateX(0deg) rotateY(3deg)
+            animation: card 1.8s
+            transform-style: preserve-3d
+            animation-delay: 1.5s
+            animation-fill-mode: forwards
+            @keyframes card
+                0%
+                    transform: rotateX(0deg) rotateY(3deg)
+                    margin-left: -500px
+                100%
+                    margin-left: 0px
+                    transform: rotateX(0deg) rotateY(0deg)
+            .info1
+                color: black
+                font-size: 19px
+                padding-top: 1px
+                h2
+                    margin: 0 5%
+                    margin-top: -20px
+                .aliance-box, .masters-box, .body-box
+                    min-height: 110px
+                    background-color: #ffffff
+                    margin: 12px 4%
+                    padding: 12px
+                .home-box
+                    background-image: url('place.png')
+                    background-size: cover
+                    height: 100px
+                    padding: 12px
+                    border-radius: 0px
+                .race-box
+                    text-align: center
+                    display: flex
+                    justify-content: center
+                    flex-direction: column
+                .body-box
+                    > div
+                        display: flex
+                        flex: row
+                        justify-content: space-evenly
+                        .spin
+                            font-family: 'Nunito', sans-serif
+                            background-image: url('ico1.png')
+                            justify-content: center
+                            background-size: cover
+                            align-content: center
+                            padding-top: 14px
+                            font-size: 16px
+                            display: flex
+                            height: 50px
+                            width: 50px
+                            animation: rotating 2s
+                            animation-iteration-count: 1
+                            animation-direction: linear
+                            animation-delay: 3s
+                            @keyframes rotating
+                                0%
+                                    transform: rotate(-360deg)
+                                100%
+                                    transform: rotate(0deg)
+                            p
+                                transform-origin: 50% 30%
+                                animation-iteration-count: 3
+                                animation-direction: linear
+                                animation: stablish 2s
+                                animation-delay: 3s
+                                animation-fill-mode: forwards
+                            @keyframes stablish
+                                0%
+                                    color: #ffffff
+                                    transform: rotate(0deg)
+                                25%
+                                    color: #ff0000
+                                40%
+                                    color: #ffffff
+                                60%
+                                    color: #c20000
+                                65%
+                                    color: #ff5151
+                                90%
+                                    color: #c20000
+                                100%
+                                    color: #ff0000
+                                    transform: rotate(360deg)
+                .aliance-box
+                    z-index: 3
+                .masters-box
+                    z-index: 2
+                               
+
+                .aliance-box, .masters-box
+                    transition: margin-bottom .8s
+                    position: relative
+                    animation-duration: .8s
+                    animation-direction: linear
+                    border-color: red
+                    @keyframes blaser
+                        0%
+                            border-color: #c20000
+                        25%
+                            border-color: #ff0000
+                        40%
+                            border-color: #ff0000
+                        60%
+                            border-color: #c20000
+                        65%
+                            border-color: #ffaeae
+                        90%
+                            border-color: #c20000
+                        100%
+                            border-color: #ff0000
+
+                        
+                    
+                    .wrap-list
+                        ul
+                            transition: height .6s
+                            overflow: hidden
+                            height: 50px
+                            li
+                                font-family: 'Nunito', sans-serif
+                                text-decoration: none
+                                list-style: none
+                        .arrow
+                            width: 0
+                            height: 0
+                            border-radius: 5px
+                            border-left: 15px solid transparent
+                            border-right: 15px solid transparent
+                            border-top: 15px solid #f00
+                            background-color: none
+                            background: none
+                            display: block
+                            margin: auto
+                            outline: 0
+                            transition: transform .8s
+                    
+        .widget
+            box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
+            -webkit-box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
+            -moz-box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
+            height: 20%
+            width: 40%
+            background: red
+            bottom: -133px
+            right: 0
+            border-radius: 100% 0 0 0
+            z-index: 3
+            background-image: url('1.png')
+            background-size: cover
+            animation: pushup .8s
+            animation-delay: .8s
+            animation-fill-mode: forwards
+            @keyframes pushup
+                0%
+                    bottom: -133px
+                    
+                100%
+                    bottom: 0
+
+                    
+
+        .widget::after
+            position: absolute
+            content: ''
+            height: 200%
+            width: 200%
+            background: rgb(0,55,155)
+            background: radial-gradient(circle, rgba(0,55,155,0.691415313225058) 18%, rgba(4,57,222,0.38515081206496515) 81%, rgba(46,0,3,0.7610208816705336) 96%)
+            bottom: -100%
+            right: -100%
+            border-radius: 100%
+            z-index: 2
+            animation: effect 1s
+            animation-iteration-count: infinite
+
+        .items
+            width: 25%
+            height: 83%
+            right: 0
+            top: 0
+            overflow: scroll
+            
+            ul
+                width: 100%
+            li
+                box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
+                -webkit-box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
+                -moz-box-shadow: -4px -3px 5px -1px rgba(0,0,0,0.33)
+                opacity: 0
+                transition-timing-function: cubic-bezier(0.42, 0, 1, 1)
+                list-style: none
+                margin-left: 10px
+                height: 70px
+                width: 100%
+                transition: margin-left .5s, height .3s, width .3s, opacity .3s
+
+            li:hover
+                margin-left: 0px!important
+                height: 90px
+                width: 108%
+
+            li:nth-child(odd)
+                background-image: url(1.png)
+                background-size: cover
+            li:nth-child(even)
+                background-image: url(2.png)
+                background-size: cover
