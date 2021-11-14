@@ -8,102 +8,76 @@
     <title>Swars</title>
 </head>
 <body>
+    <div id="app">
+        <div class="d-none" id="loading">Loading</div>
+      </div>
 
         <main>
             <div class="cards">
-                <div class="info1">
-                    <h2>Nombre del item</h2>
-                    <div class="aliance-box" id="aliance-box">
-                        <h3>Aliado con <span>5</span> facciones</h3>
-                        <div class="wrap-list">
-                            <ul id="list1">
-                                <li>Faccion</li>
-                                <li>Faccion</li>
-                                <li>Faccion</li>
-                                <li>Faccion</li>
-                                <li>Faccion</li>
-                                <li>Faccion</li>
-                            </ul>
-                            <button class="arrow" id="arrow1"></button>
-                        </div>
-                    </div>
-                    <div class="masters-box" id="masters-box">
-                        <h3>Aprendíz de <span>5</span> Maestros</h3>
-                        <div class="wrap-list">
-                            <ul id="list2">
-                                <li>Maestro</li>
-                                <li>Maestro</li>
-                                <li>Maestro</li>
-                                <li>Maestro</li>
-                                <li>Maestro</li>
-                                <li>Maestro</li>
-                            </ul>
-                            <button class="arrow" id="arrow2"></button>
-                        </div>
-                    </div>
-                    <div class="body-box">
-                        <h3>Stats</h3>
-                        <div>
-                            <span class="spin" style="background-image: url(img/ico1.png);"><p>1.3m</p></span>
-                            <span class="spin" style="background-image: url(img/ico1.png);"><p>1.3m</p></span>
-                            <span class="spin" style="background-image: url(img/ico1.png);"><p>1.3m</p></span>
-                        </div>
-                    </div>
-                    <div class="home-box" style="background-image: url('img/place.png')">
-                        <h3>From</h3>
-                    </div>
-                    <div class="race-box">
-                        <h3>Raza</h3>
-                        <span>Alien of extern</span>
-                    </div>
+                <div class="info1" id="dynamic-cards">
+
                 </div>
             </div>
-    
+
+            <template id="template-card">
+                <h2>Nombre del item</h2>
+                <div class="aliance-box" id="aliance-box">
+                    <h3>Aliado con <span>5</span> facciones</h3>
+                    <div class="wrap-list">
+                        <ul id="list1">
+                            
+                        </ul>
+                        <button class="arrow" id="arrow1"></button>
+                    </div>
+                </div>
+                <div class="masters-box" id="masters-box">
+                    <h3>Aprendíz de <span>5</span> Maestros</h3>
+                    <div class="wrap-list">
+                        <ul id="list2">
+
+                        </ul>
+                        <button class="arrow" id="arrow2"></button>
+                    </div>
+                </div>
+                <div class="body-box">
+                    <h3>Stats</h3>
+                    <div>
+                        <span class="spin" style="background-image: url(img/ico1.png);"><p>1.3m</p></span>
+                        <span class="spin" style="background-image: url(img/ico1.png);"><p>1.3m</p></span>
+                        <span class="spin" style="background-image: url(img/ico1.png);"><p>1.3m</p></span>
+                    </div>
+                </div>
+                <div class="home-box" style="background-image: url('../img/place.png')">
+                    <h3 style="color: white">From</h3>
+                    <span style="color: white; margin: 0 auto">Loction</span>
+                </div>
+                <div class="race-box">
+                    <h3>Raza</h3>
+                    <span>Alien of extern</span>
+                </div>
+            </template>
+
             <div class="items">
                 <ul id="ul">
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
-                    <li style="background-image: url(img/1.png);"></li>
+
                 </ul>
+                <template id="character-min">
+                    <li style="background-image: url(img/1.png);" onclick="selected(this)"></li>
+                </template>
             </div>
             <div class="widget" style="background-image: url(img/2.png);">
     
             </div>
         </main>
 
-    <script src="js/scripts.js">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/vue.js"></script>
+    <script>
+        app.mount('#app')
+        </script>
+    <script src="js/scripts.js"></script>
 
 
-
-        
-    </script>
 </body>
 </html>
 

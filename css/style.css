@@ -11,6 +11,10 @@ h1, h2, h3 {
   font-weight: 300;
 }
 
+.d-none {
+  display: none;
+}
+
 body {
   height: 100%;
   width: 100%;
@@ -254,7 +258,7 @@ body main .items li {
   width: 100%;
   transition: margin-left 0.5s, height 0.3s, width 0.3s, opacity 0.3s;
 }
-body main .items li:hover {
+body main .items li.active {
   margin-left: 0px !important;
   height: 90px;
   width: 108%;

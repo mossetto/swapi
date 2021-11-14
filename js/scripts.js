@@ -2,7 +2,7 @@ window.scrollTo(1000,1000);
 var btnArrow = document.getElementById('arrow1')
 btnArrow.addEventListener("click", desplegar1)
 
-function desplegar1(){
+function desplegar1(btnArrow){
     
     var alianceBox = document.getElementById('aliance-box')
     var listOne = document.getElementById('list1')
@@ -84,5 +84,19 @@ function barrido(){
         
     }
 }
-barrido();
+
+// apply active class to click
+
+function selected(element){
+
+    const items = document.querySelectorAll("#ul > li")
+    
+    for (var i = 0; i < items.length; i++ ){
+        items[i].classList.remove('active');
+
+    }
+    element.classList.add('active');
+
+}
+
 
